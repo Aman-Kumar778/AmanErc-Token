@@ -9,7 +9,7 @@ contract Amantoken is ERC20 {
     modifier onlyOwner() {
         require(owner == msg.sender, "only owner can access");
         _;
-    }
+    } 
 
     constructor(string memory name, string memory symbol) ERC20(name, symbol) {
         // Mint 100 tokens to msg.sender
