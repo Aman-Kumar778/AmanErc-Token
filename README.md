@@ -46,6 +46,10 @@ contract Amantoken is ERC20 {
         _mint(msg.sender, 100 * 10 ** uint(decimals()));
     }
 
+    function mint(address to, uint256 amount) public onlyOwner {
+        _mint(to, amount);
+    }
+
     function Ak_transfer(address add, uint256 value) external {
         _transfer(msg.sender, add, value);
     }
